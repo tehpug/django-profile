@@ -1,0 +1,3 @@
+
+class UserManeger(object):
+	pass
