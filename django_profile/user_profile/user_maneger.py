@@ -1,6 +1,6 @@
 
 class UserManeger(object):
-	def addNewUser(self):
+    def addNewUser(self):
         pass
     def changePassword(self):
         pass
