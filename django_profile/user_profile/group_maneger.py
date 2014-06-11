@@ -6,7 +6,7 @@ class GroupManeger(object):
 		pass
 	def removePremission():
 		pass
-	def showAllPremissions():
+	def setAllPremissions():
 		pass
 	def removeAllPremissions():
 		pass

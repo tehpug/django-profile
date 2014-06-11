@@ -20,6 +20,6 @@ class UserManeger(object):
         pass
     def removeAllPremissions(self):
         pass
-    def showAllPremissions(self):
+    def getAllPremissions(self):
         pass
 
