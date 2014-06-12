@@ -1,11 +1,17 @@
-
+from django.contrib.auth.models import User
 class UserManager(object):
-    def addNewUser(self):
-        pass
-    def changePassword(self):
-        pass
-    def removeUser(self):
-        pass
+    def addNewUser(self,**kwargs):
+        '''
+        >>>addNewUser(username='nima',email='nim4n@yahoo.com')
+        '''
+        userObj = User.objects.create_user(username=kwargs['username'],email=kwargs['email'],password=kwargs['password'])
+        return obj
+    def changePassword(self, **kwargs):
+        userObj=  User.objects.get(kwargs['username'])
+        userObj.set_password(kwargs['password'])
+        return userObj
+    def removeUser(self, **kwargs):
+        userObj = User.objects.get()
     def addGroup(self):
         pass
     def removeGroup(self):
@@ -23,3 +29,4 @@ class UserManager(object):
     def getAllPremissions(self):
         pass
 
+addNewUser(username=nima,email=nim)
