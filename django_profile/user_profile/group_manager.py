@@ -1,5 +1,5 @@
 
-class GroupManeger(object):
+class GroupManager(object):
 	def showAllGroups():
 		pass
 	def addPremission():

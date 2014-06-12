@@ -1,4 +1,4 @@
-class PremissionManeger(object):
+class PremissionManager(object):
 	def addPremission():
 		pass
 	def removePremission():

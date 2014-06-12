@@ -1,5 +1,5 @@
 
-class UserManeger(object):
+class UserManager(object):
     def addNewUser(self):
         pass
     def changePassword(self):
