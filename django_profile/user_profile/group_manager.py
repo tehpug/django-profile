@@ -1,7 +1,8 @@
+from django.contrib.auth.models import Group
 
 class GroupManager(object):
-	def showAllGroups():
-		pass
+	def getAllGroups():
+		return Group.objects.all()
 	def addPremission():
 		pass
 	def removePremission():
