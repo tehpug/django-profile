@@ -19,10 +19,23 @@ class UserManager(object):
         userObj = User.objects.get(username=kwargs['username'])
         userObj.set_password(kwargs['password'])
         return userObj
-    def addGroup(self):
-        pass
-    def removeGroup(self):
-        pass
+    def addGroup(self, **kwargs):
+        '''
+        >>> addGroup(groupName='testGroup',username='morteza')
+        '''
+        groupObj = Group.objects.get(name=kwargs['groupname'])
+        userObj = User.objects.get(username=kwargs['username'])
+        userObj.groups.add(groupObj)
+        return userObj
+
+    def removeGroup(self, **kwargs):
+        '''
+        >>> removeGroup(groupName='testGroup',username='morteza')
+        '''
+        groupObj = Group.objects.get(name=kwargs['groupname'])
+        userObj = User.objects.get(username=kwargs['username'])
+        userObj.groups.remove(groupObj)
+        return userObj
     def updateUser(self):
         pass
     def addPremission(self):
