@@ -1,24 +1,35 @@
 from django.contrib.auth.models import User
 
+from models import Group
+
+
 class UserManager(object):
-    def addNewUser(self,**kwargs):
+    def addNewUser(self, **kwargs):
         '''
         >>>addNewUser(username='nima',email='nim4n@yahoo.com',password='nima')
         >>>
         '''
-        userObj = User.objects.create_user(username=kwargs['username'],email=kwargs['email'],password=kwargs['password'])
-        return obj
-    def createSuperUser(self,**kwargs):
-        userObj = User.objects.create_superuser(username=kwargs['username'],email=kwargs['email'],password=kwargs['password'])
+        userObj = User.objects.create_user(username=kwargs['username'],
+                                           email=kwargs['email'],
+                                           password=kwargs['password'])
         return userObj
+
+    def createSuperUser(self, **kwargs):
+        userObj = User.objects.create_superuser(username=kwargs['username'],
+                                                email=kwargs['email'],
+                                                password=kwargs['password'])
+        return userObj
+
     def changePassword(self, **kwargs):
-        userObj=  User.objects.get(kwargs['username'])
+        userObj = User.objects.get(kwargs['username'])
         userObj.set_password(kwargs['password'])
         return userObj
+
     def removeUser(self, **kwargs):
         userObj = User.objects.get(username=kwargs['username'])
         userObj.set_password(kwargs['password'])
         return userObj
+
     def addGroup(self, **kwargs):
         '''
         >>> addGroup(groupName='testGroup',username='morteza')
@@ -36,17 +47,23 @@ class UserManager(object):
         userObj = User.objects.get(username=kwargs['username'])
         userObj.groups.remove(groupObj)
         return userObj
+
     def updateUser(self):
         pass
+
     def addPremission(self):
         pass
+
     def removePremission(self):
         pass
+
     def hasPremision(self):
         pass
+
     def removeAllPremissions(self):
         pass
+
     def getAllPremissions(self):
         pass
 
-addNewUser(username=nima,email=nim)
+# addNewUser(username=nima,email=nim)
