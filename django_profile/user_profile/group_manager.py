@@ -5,16 +5,16 @@ class GroupManager(object):
     def getAllGroups():
         return Group.objects.all()
 
-    def addPremission():
+    def addPermission():
         pass
 
-    def removePremission():
+    def removePermission():
         pass
 
-    def setAllPremissions():
+    def setAllPermissions():
         pass
 
-    def removeAllPremissions():
+    def removeAllPermissions():
         pass
 
     def copyUser():
@@ -29,5 +29,5 @@ class GroupManager(object):
     def getGroupByName():
         pass
 
-    def getAllPremissions():
+    def getAllPermissions():
         pass

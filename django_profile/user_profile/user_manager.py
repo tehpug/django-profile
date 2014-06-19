@@ -48,22 +48,24 @@ class UserManager(object):
         userObj.groups.remove(groupObj)
         return userObj
 
-    def updateUser(self):
+    def updateUser(self, **kwargs):
         pass
 
-    def addPremission(self):
+    def addPermission(self):
         pass
 
-    def removePremission(self):
+    def removePermission(self, **kwargs):
         pass
 
-    def hasPremision(self):
+    def hasPermission(self, **kwargs):
+        userObj = User.objects.get(username=kwargs['username'])
+        userObj.has_perm(kwargs['perms'])
+        return userObj
+
+    def removeAllPermissions(self):
         pass
 
-    def removeAllPremissions(self):
-        pass
-
-    def getAllPremissions(self):
+    def getAllPermissions(self):
         pass
 
 # addNewUser(username=nima,email=nim)

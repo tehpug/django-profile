@@ -1,5 +1,5 @@
 
 
 #write your decorators here
-def checkPremission():
+def checkPermission():
     pass
